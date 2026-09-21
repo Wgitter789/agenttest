@@ -1,0 +1,3 @@
+# 模拟“外部业务系统”的用户月度使用记录。
+# 该相对路径会由 get_abs_path 转换为项目根目录下的绝对路径。
+external_data_path: data/external/records.csv

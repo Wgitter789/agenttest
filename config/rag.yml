@@ -1,0 +1,7 @@
+# Agent 决策、最终回答以及 RAG 资料总结共同使用的聊天模型。
+# 该模型需要支持 Tool Calling，且当前账户必须有调用权限。
+chat_model_name: qwen3-max
+
+# 把知识片段和用户查询转换成向量的 Embedding 模型。
+# 更换后通常需要重建 Chroma，保证建库与查询处于同一向量空间。
+embedding_model_name: text-embedding-v4

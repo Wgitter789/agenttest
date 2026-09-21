@@ -1,0 +1,10 @@
+langchain>=1,<2
+langchain-community
+langchain-chroma
+langchain-text-splitters
+langgraph
+streamlit
+dashscope
+PyYAML
+pypdf
+

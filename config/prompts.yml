@@ -1,0 +1,8 @@
+# 普通客服场景的系统提示词，由 create_agent 默认加载。
+main_prompt_path: prompts/main_prompt.txt
+
+# RAG 工具内部使用的总结模板，必须保留 {input} 和 {context} 变量。
+rag_summarize_prompt_path: prompts/rag_summarize.txt
+
+# fill_context_for_report 触发报告模式后使用的系统提示词。
+report_prompt_path: prompts/report_prompt.txt

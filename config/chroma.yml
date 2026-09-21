@@ -1,0 +1,29 @@
+# Chroma 中的集合名称；一个数据库目录可以包含多个集合。
+collection_name: agent
+
+# Chroma 本地持久化目录。
+# 当前代码直接使用这个相对路径，因此必须从项目根目录启动，
+# 否则可能在 agent/ 或 rag/ 等当前工作目录下产生另一份 chroma_db。
+persist_directory: chroma_db
+
+# Retriever 每次语义检索返回的最相关文本片段数量。
+k: 3
+
+# 待导入知识文件的目录；代码会把它转换为项目绝对路径。
+data_path: data
+
+# 保存已成功入库文件的 MD5，一行一个，用于跳过完全相同的文件。
+md5_hex_store: md5.text
+
+# 允许进入 RAG 知识库的文件后缀；当前 Loader 只实现了 TXT 和 PDF。
+allow_knowledge_file_type: ["txt", "pdf"]
+
+# 每个文本片段的目标最大字符数。代码使用 len 计数，不等于模型 token 数。
+chunk_size: 200
+
+# 相邻片段保留的重复字符数，用于降低重要语义刚好被边界切断的风险。
+chunk_overlap: 20
+
+# 递归切分器按此顺序尝试寻找自然边界：先段落、再换行、句号等，
+# 最后的空字符串表示实在找不到边界时按字符切分。
+separators: ["\n\n", "\n", ".", "!", "?", "。", "！", "？", " ", ""]
